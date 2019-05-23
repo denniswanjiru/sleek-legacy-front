@@ -1,13 +1,29 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700');
+
+html, body, * {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Titillium Web', sans-serif;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.page-wrapper {
+  display: grid;
+  grid-template-areas:
+    "s h"
+    "s c"
+    "f f";
+  height: 100vh;
+  grid-template-columns: 18% 1fr;
+  grid-template-rows: 65px 1fr 80px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 10px;;
 }

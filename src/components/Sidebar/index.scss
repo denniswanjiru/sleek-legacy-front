@@ -1,0 +1,43 @@
+aside {
+  grid-area: s;
+      border-right: 1px solid #eaeaea;
+
+   .brand {
+      font-size: 34px;
+      font-weight: 200;
+      padding: 10px 40px;
+    }
+
+  .links {
+    margin-top: 20px;
+    cursor: pointer;
+    list-style: none;
+
+    li {
+      padding: 10px 40px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 15px;
+        margin-right: 20px;;
+      }
+
+      &:hover {
+        background: lighten(#ccc, 13%);
+      }
+
+      & .active {
+        color: red;
+      }
+
+      & a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 14px;
+      }
+    }
+  }
+}

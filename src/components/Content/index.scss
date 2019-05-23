@@ -1,0 +1,65 @@
+main {
+  grid-area: c;
+  padding: 20px 40px;
+  grid-template-rows: 40% 50%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  display: grid;
+  margin-bottom: 40px;
+  grid-template-areas:
+    "recomend recomend"
+    "history flow";
+
+  .recommend {
+    grid-area: recomend;
+
+    .r-flex {
+      display: flex;
+      .song:not(:last-child) {
+        margin-right: 30px;;
+      }
+
+      .song {
+        cursor: pointer;
+        display: grid;
+        grid-template-rows: 1fr 20px 20px;
+        grid-gap: 4px;
+
+        .avatar {
+          height: 130px;
+          width: 132px;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          span {
+            color: #999;
+            font-size: 13px;
+          }
+        }
+
+        .artist {
+          font-size: 12px;
+          color: #777;
+        }
+      }
+    }
+  }
+
+  .history {
+    grid-area: history;
+  }
+
+  .flow {
+    grid-area: flow;
+
+    .cover {
+      cursor: pointer;
+      height: 295px;
+      width: 100%;
+    }
+  }
+}
