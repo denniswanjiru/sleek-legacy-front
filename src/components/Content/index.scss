@@ -51,11 +51,10 @@ main {
 
   .history {
     grid-area: history;
-    overflow-y: scroll;
-    height: 340px;
 
     .songlist {
-      // overflow-y: scroll;
+      height: 295px;
+      overflow-y: scroll;
     }
   }
 
