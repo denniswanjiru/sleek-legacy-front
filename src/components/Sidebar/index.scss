@@ -1,6 +1,9 @@
 aside {
   grid-area: s;
-      border-right: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  position: fixed;
+  height: 100vh;
+  width: 250px;
 
    .brand {
       font-size: 34px;

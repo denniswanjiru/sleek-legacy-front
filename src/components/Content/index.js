@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.scss'
+import History from '../History';
 
 export default function Content() {
   return (
@@ -73,6 +74,16 @@ export default function Content() {
       </div>
       <div className="history">
         <h1 className="section-title">Recently Played</h1>
+        <div className="songlist">
+          <History />
+          <History />
+          <History />
+          <History />
+          <History />
+          <History />
+          <History />
+          <History />
+        </div>
       </div>
       <div className="flow">
         <h1 className="section-title">Flow</h1>

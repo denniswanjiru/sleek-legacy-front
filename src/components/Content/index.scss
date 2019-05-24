@@ -1,9 +1,9 @@
 main {
   grid-area: c;
   padding: 20px 40px;
-  grid-template-rows: 40% 50%;
+  grid-template-rows: 230px 50%;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 15px 30px;
   display: grid;
   margin-bottom: 40px;
   grid-template-areas:
@@ -51,6 +51,12 @@ main {
 
   .history {
     grid-area: history;
+    overflow-y: scroll;
+    height: 340px;
+
+    .songlist {
+      // overflow-y: scroll;
+    }
   }
 
   .flow {

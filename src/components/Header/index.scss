@@ -5,6 +5,10 @@ header {
  border-bottom: 1px solid #eaeaea;
   align-items: center;
   padding: 0 40px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
 
   nav {
     display: flex;
