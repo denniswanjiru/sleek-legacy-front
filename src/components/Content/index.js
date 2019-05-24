@@ -87,7 +87,7 @@ export default function Content() {
       </div>
       <div className="flow">
         <h1 className="section-title">Flow</h1>
-        <img className="cover" src="https://images.unsplash.com/photo-1534886317787-63ec182818cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt=""/>
+        <img className="banner" src="https://images.unsplash.com/photo-1534886317787-63ec182818cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt=""/>
       </div>
     </main>
   )

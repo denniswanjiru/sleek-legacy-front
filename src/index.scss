@@ -27,3 +27,34 @@ html, body, * {
   font-size: 22px;
   margin-bottom: 10px;;
 }
+
+@media (max-width: 690px) {
+  .page-wrapper {
+    grid-template-areas:
+    "h h"
+    "c c"
+    "f f";
+  }
+
+  aside {
+    display: none;
+  }
+
+  .search-input {
+    width: 100%!important;
+  }
+
+  .flow {
+    .banner {
+      height: 200px!important;
+    }
+  }
+
+  .player {
+    display: none!important;
+  }
+
+  main {
+    padding: 20px!important;
+  }
+}

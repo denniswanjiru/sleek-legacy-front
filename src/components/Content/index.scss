@@ -15,6 +15,7 @@ main {
 
     .r-flex {
       display: flex;
+      overflow-x: scroll;
       .song:not(:last-child) {
         margin-right: 30px;;
       }
@@ -61,10 +62,27 @@ main {
   .flow {
     grid-area: flow;
 
-    .cover {
+    .banner {
       cursor: pointer;
       height: 295px;
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 951px) {
+  main {
+    grid-gap: 20px;
+    margin: 0;
+    grid-template-areas:
+    "recomend recomend"
+    "flow flow"
+    "history history";
+    grid-template-rows: 230px max-content 250px;
+
+    .songlist {
+      height: 100%!important;
+      margin-bottom: 120px;
     }
   }
 }
