@@ -70,6 +70,15 @@ export default function Content() {
             </div>
             <div className="artist">Anne Marie</div>
           </div>
+
+          <div className="song">
+            <img className="avatar" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTUzMDQ5MDQ5NDIxODQ5NjA3/cardi-b-arrives-at-the-2017-mtv-video-music-awards-at-the-forum-on-august-27-2017-in-inglewood-california-photo-by-gregg-deguire_getty-images-500.jpg" alt="" />
+            <div className="title">
+              <h5>Money</h5>
+              <span>3:45</span>
+            </div>
+            <div className="artist">Cardi B</div>
+          </div>
         </div>
       </div>
       <div className="history">

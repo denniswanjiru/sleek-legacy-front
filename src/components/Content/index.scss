@@ -13,11 +13,18 @@ main {
   .recommend {
     grid-area: recomend;
 
+    .r-flex::-webkit-scrollbar {
+      display: none; // Safari and Chrome
+    }
+
     .r-flex {
       display: flex;
       overflow-x: scroll;
+      -ms-overflow-style: none;  // IE 10+
+      scrollbar-width: none; // Firefox
+
       .song:not(:last-child) {
-        margin-right: 30px;;
+        margin-right: 30px;
       }
 
       .song {
