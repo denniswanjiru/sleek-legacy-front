@@ -35,3 +35,15 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 20px;
+
+    .icon {
+       height: 20px;
+       width: max-content;
+    }
+  }
+}

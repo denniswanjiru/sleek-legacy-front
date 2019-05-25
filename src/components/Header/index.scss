@@ -2,7 +2,7 @@
 header {
   grid-area: h;
   display: grid;
- border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
   align-items: center;
   padding: 0 40px;
   position: sticky;
@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
 
     .search-input {
-      width: 40%;
+      width: 80%;
       display: flex;
       align-items: center;
 
@@ -56,3 +56,23 @@ header {
   }
 }
 
+@media (max-width: 690px) {
+  header {
+    padding: 0 20px!important;
+  }
+
+  nav {
+    display: flex!important;
+    justify-content: space-between!important;
+    width: 100%!important;
+  }
+
+  .search-input {
+    margin-left: 30px;
+    flex: 1;
+  }
+
+  .account {
+    width: max-content!important;
+  }
+}
