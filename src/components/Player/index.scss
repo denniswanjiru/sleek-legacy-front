@@ -179,3 +179,11 @@
     font-weight: bold;
   }
 }
+
+@media (max-width: 690px) {
+  .player {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

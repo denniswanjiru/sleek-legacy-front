@@ -15,7 +15,6 @@ import useWindowDimensions from '../../utils/customHooks';
 
 const Player = ({ context }) => {
   const { width } = useWindowDimensions();
-  console.log(width);
   return (
     <footer className="player">
       {width > 691 && <div className="playing">
