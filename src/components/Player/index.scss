@@ -165,3 +165,17 @@
 
   }
 }
+
+
+.song-mobile {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+
+  div {
+    margin: 0 10px;
+  }
+
+  .song--title {
+    font-weight: bold;
+  }
+}
