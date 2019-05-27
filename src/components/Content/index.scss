@@ -92,4 +92,10 @@ main {
       margin-bottom: 120px;
     }
   }
+
+  .r-flex {
+    .song:not(:last-child) {
+      margin-right: 20px!important;
+    }
+  }
 }
