@@ -7,7 +7,7 @@ import './index.scss'
 import useWindowDimensions from '../../utils/customHooks';
 
 export default function History() {
-  const {height, width} = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <div className="card">

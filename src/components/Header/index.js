@@ -1,13 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import  { useDispatch } from 'react-redux';
+import { debounce } from 'lodash';
 
 import menu from '../../assets/icons/menu.svg';
 import bell from '../../assets/icons/bell.svg';
 import search from '../../assets/icons/search.svg';
 import './index.scss'
 import useWindowDimensions from '../../utils/customHooks';
+import { searchAction } from '../../store/actions/searchActions';
 
 export default function Header() {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
+  const dispatch = useDispatch();
+
+  const updateSearch = debounce(e => {
+    dispatch(searchAction(e.target.value));
+  }, 1000)
+
+  const handleChange = e => {
+    e.persist();
+    updateSearch(e);
+  };
 
   return (
     <header>
@@ -15,7 +28,7 @@ export default function Header() {
         {width < 691 && <img className="icon" src={menu} alt=""/>}
         <div className="search-input">
           <img src={search} alt=""/>
-          <input className="search" placeholder="Search"/>
+          <input className="search" placeholder="Search" onChange={handleChange} />
         </div>
         <div className="account">
           <img src={bell} className="notify" alt=""/>
