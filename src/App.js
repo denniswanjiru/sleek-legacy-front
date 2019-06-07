@@ -15,7 +15,7 @@ import Routes from './routes';
 const store = configStore();
 
 const client = new ApolloClient({
-  uri: 'http://sleek.warukira.me'
+  uri: 'https://sleek.warukira.me'
 });
 
 function App() {

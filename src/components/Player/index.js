@@ -41,7 +41,7 @@ const Player = () => {
 
   useEffect(() => {
     setStream("")
-    streamUrl && fetch(`http://sleek.warukira.me/${streamUrl}`)
+    streamUrl && fetch(`https://sleek.warukira.me/${streamUrl}`)
       .then(res => res.json())
       .then((data) => setStream(data));
   }, [current, streamUrl])
@@ -145,7 +145,7 @@ const Player = () => {
             <small id="end-time" className="end-time"></small>
           </div>)}
           {stream && <audio autoPlay onEnded={songEnd} id="audio" onTimeUpdate={progressBar}>
-            <source src={`http://sleek.warukira.me${stream.url}`} type="audio/mpeg" />
+            <source src={`https://sleek.warukira.me${stream.url}`} type="audio/mpeg" />
           </audio>}
         </div>
         {width > 691 && <div className="actions">
