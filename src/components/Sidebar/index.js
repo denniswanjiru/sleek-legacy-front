@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom';
 
 import search from '../../assets/icons/search.svg';
 import headphones from '../../assets/icons/headphones.svg';
@@ -20,7 +21,7 @@ export default function Sidebar() {
   return (
     <Fragment>
       <aside>
-        <h1 className="brand">Sleek</h1>
+        <Link to="/"><h1 className="brand">Sleek</h1></Link>
         <ul className="links">
           <li className="active">
             <img src={search} alt="" />
@@ -64,8 +65,8 @@ export default function Sidebar() {
         </ul>
       </aside>
 
-      <div className={show ? 'slider' : 'slider close hide'}>
-        <button className="cancel" onClick={() => dispatch(closeLyrics())}>Close</button>
+      <div className={show ? 'slider' : 'slider hidden'}>
+        <button className="close" onClick={() => dispatch(closeLyrics())}>Close</button>
         <div className="lyx">
           <Lyrics />
         </div>

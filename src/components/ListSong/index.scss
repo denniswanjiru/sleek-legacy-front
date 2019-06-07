@@ -5,7 +5,12 @@
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: 2fr 2fr 1fr 1fr;
+  grid-template-columns: 3fr 2fr 50px 50px;
+  cursor: pointer;
+
+  &:hover {
+    background: #eaeaea;
+  }
 
   .song {
     display: flex;

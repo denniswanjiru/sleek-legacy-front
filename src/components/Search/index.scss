@@ -17,16 +17,25 @@ section {
     }
   }
 
-  .row:not(:last-child) {
-    border-bottom: solid 1px #ccc;
-  }
-
   .row {
     display: grid;
     grid-template-columns: 1fr 60px 1fr 30px 25px;
     align-items: center;
     grid-gap: 30px;
     padding: 10px 0;
+
+    &:not(:last-child) {
+      border-bottom: solid 1px #ccc;
+    }
+
+    &:hover, {
+      background: #eaeaea;
+    }
+
+    &:first-child:hover {
+      background: inherit;
+      cursor: default;
+    }
 
     .banner {
       height: 30px;

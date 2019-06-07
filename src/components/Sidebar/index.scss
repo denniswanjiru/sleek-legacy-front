@@ -5,7 +5,7 @@ aside {
   height: 100vh;
   width: 250px;
 
-   .brand {
+    .brand {
       font-size: 34px;
       font-weight: 200;
       padding: 10px 40px;
@@ -54,21 +54,22 @@ aside {
   transition: all 1s;
   background-color: #fff;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 120px;
+  padding-top: 10px;
+  padding-bottom: 60px;
   text-align: center;
   font-size: 24px;
   font-weight: 400;
   color: #000;
   line-height: 60px;
 
-  &.close {
+  &.hidden {
     top: 100vh;
     height: 0;
     opacity: 0;
+    z-index: -1;
   }
 
-  .cancel {
+  .close {
     position: absolute;
     right: 50px;
     top: 20px;
@@ -78,7 +79,6 @@ aside {
     cursor: pointer;
     font-size: 12px;
     border-radius: 3%;
-
     background: linear-gradient(to right, lighten(#000, 15%) 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;

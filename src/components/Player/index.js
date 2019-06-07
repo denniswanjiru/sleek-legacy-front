@@ -14,12 +14,12 @@ import volume from "../../assets/icons/volume.svg";
 import plus from "../../assets/icons/plus.svg";
 import pause from "../../assets/icons/pause.svg";
 import useWindowDimensions from '../../utils/customHooks';
-import { togglePlaying, playNext, playPrev, updateQueue, resetQueue } from '../../store/actions/playerActions';
+import { togglePlaying, playNext, playPrev, updateQueue, resetQueue, setRecent } from '../../store/actions/playerActions';
 import { toggleLyrics } from '../../store/actions/lyricsActions';
 
 const Player = () => {
   const { width } = useWindowDimensions();
-  const { playing, current, np } = useSelector(state => state.player);
+  const { playing, current, np, recent } = useSelector(state => state.player);
   const [stream, setStream] = useState("");
   const dispatch = useDispatch();
 
@@ -31,8 +31,17 @@ const Player = () => {
   }
 
   useEffect(() => {
+    current.id && dispatch(setRecent(current));
+  }, [current])
+
+  useEffect(() => {
+    console.log('RECENT', recent);
+    localStorage.setItem('RecentlyPlayed', JSON.stringify(recent));
+  }, [recent])
+
+  useEffect(() => {
     setStream("")
-    streamUrl && fetch(`http://localhost:5000/${streamUrl}`)
+    streamUrl && fetch(`http://sleek.warukira.me/${streamUrl}`)
       .then(res => res.json())
       .then((data) => setStream(data));
   }, [current, streamUrl])
@@ -136,7 +145,7 @@ const Player = () => {
             <small id="end-time" className="end-time"></small>
           </div>)}
           {stream && <audio autoPlay onEnded={songEnd} id="audio" onTimeUpdate={progressBar}>
-            <source src={`http://localhost:5000${stream.url}`} type="audio/mpeg" />
+            <source src={`http://sleek.warukira.me${stream.url}`} type="audio/mpeg" />
           </audio>}
         </div>
         {width > 691 && <div className="actions">
