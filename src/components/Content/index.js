@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux';
+
 import './index.scss'
-import History from '../History';
+import ListSong from '../ListSong';
 
 export default function Content() {
+  // const [recent, setRecentlyPlayed] = useState([]);
+  const { recent } = useSelector(state => state.player);
+
+  // useEffect(() => {
+  //   console.log('>>>>>>>>>', recentlyPlayed)
+  //   const localRecent = JSON.parse(localStorage.getItem('RecentlyPlayed'));
+
+  //   if(recent) {
+  //     setRecentlyPlayed(recent)
+  //   } else {
+  //     setRecentlyPlayed(localRecent)
+  //   }
+  // }, [recent, recentlyPlayed])
+
+
   return (
     <main>
       <div className="recommend">
@@ -84,14 +101,9 @@ export default function Content() {
       <div className="history">
         <h1 className="section-title">Recently Played</h1>
         <div className="songlist">
-          <History />
-          <History />
-          <History />
-          <History />
-          <History />
-          <History />
-          <History />
-          <History />
+          {recent.length > 0 ?
+            recent.map(song => <ListSong key={song.id} track={song} />) :
+            <div>You havent played any songs yet.</div>}
         </div>
       </div>
       <div className="flow">

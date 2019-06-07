@@ -7,6 +7,10 @@ html, body, * {
   box-sizing: border-box;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .page-wrapper {
   display: grid;
   grid-template-areas:
@@ -50,11 +54,16 @@ html, body, * {
     }
   }
 
-  .player {
-    // display: none!important;
-  }
-
   main {
     padding: 20px!important;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:visited {
+    color: #000;
   }
 }
