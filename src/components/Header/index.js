@@ -29,7 +29,7 @@ export default function Header() {
         {width < 691 && <img className="icon" src={menu} alt=""/>}
           <div className="search-input">
               <img src={search} alt=""/>
-              <Link to="/search">
+              <Link to="/search" className="link">
                 <input className="search" placeholder="Search" onChange={handleChange} />
               </Link>
           </div>

@@ -91,6 +91,10 @@ main {
       height: 100%!important;
       margin-bottom: 120px;
     }
+
+    .centered {
+      height: 230px;
+    }
   }
 
   .r-flex {
@@ -98,4 +102,14 @@ main {
       margin-right: 20px!important;
     }
   }
+}
+
+.centered {
+  border: solid 1px #ccc;
+   height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  color: #888;
+  font-weight: 200;
 }

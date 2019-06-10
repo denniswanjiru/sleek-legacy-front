@@ -100,11 +100,10 @@ export default function Content() {
       </div>
       <div className="history">
         <h1 className="section-title">Recently Played</h1>
-        <div className="songlist">
-          {recent.length > 0 ?
-            recent.map(song => <ListSong key={song.id} track={song} />) :
-            <div>You havent played any songs yet.</div>}
-        </div>
+        {recent.length > 0 && <div className="songlist">
+            {recent.map(song => <ListSong key={song.id} track={song} />)}
+        </div>}
+        {recent.length < 1 && <div className="centered">You havent played any songs yet.</div>}
       </div>
       <div className="flow">
         <h1 className="section-title">Flow</h1>
