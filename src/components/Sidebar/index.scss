@@ -46,11 +46,11 @@ aside {
 }
 
 .slider {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  overflow: scroll;
   top: 0;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
   transition: all 1s;
   background-color: #fff;
   z-index: 10;
@@ -70,7 +70,7 @@ aside {
   }
 
   .close {
-    position: absolute;
+    position: fixed;
     right: 50px;
     top: 20px;
     padding: 5px 20px;

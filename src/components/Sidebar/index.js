@@ -18,6 +18,8 @@ export default function Sidebar() {
   const { show } = useSelector(state => state.lyrics);
   const dispatch = useDispatch();
 
+  document.body.style.overflow = show ? 'hidden' : 'scroll';
+
   return (
     <Fragment>
       <aside>

@@ -103,7 +103,7 @@ const Player = () => {
 
   return (
     <Fragment>
-      {current.streamUrl && <footer className="player">
+      {<footer className={`player ${current.streamUrl ? 'active': 'disabled'}`}>
         {width > 691 && <div className="playing">
           <div>
             <img

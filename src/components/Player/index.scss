@@ -12,6 +12,20 @@
   padding: 0 30px;
   justify-content: space-between;
 
+  &.disabled {
+    &:after {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      content: '';
+      pointer-events: all;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+
   .sleek--player {
     display: flex;
     height: 100%;
