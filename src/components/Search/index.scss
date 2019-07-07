@@ -93,8 +93,9 @@ section {
     grid-template-columns: 60% 1fr!important;
 
     .song {
-      img {
-        margin-right: 0;
+      .banner {
+        height: 30px!important;
+        width: 30px!important;
       }
     }
   }
