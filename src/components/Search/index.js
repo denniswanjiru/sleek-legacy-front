@@ -5,12 +5,14 @@ import { useSelector, useDispatch } from 'react-redux'
 import './index.scss';
 import { SEARCH_QUERY } from '../../queries';
 import SearchResult from './searchResult';
+import useWindowDimensions from '../../utils/customHooks';
 import { updatePlaylist, updatePlaying, togglePlaying } from '../../store/actions/playerActions';
 
 export default function Search() {
   const query = useSelector(state => state.search.query);
   const current = useSelector(state => state.player.current);
   const dispatch = useDispatch();
+  const { width } = useWindowDimensions();
 
   const handleClick = (data, song) => {
     console.log(current)
@@ -33,10 +35,10 @@ export default function Search() {
             <Fragment>
               <div className="row">
                 <h5>Song</h5>
-                <div />
+                {width > 690 && <div />}
                 <h5>Artist</h5>
-                <h5>Duration</h5>
-                <div />
+                {width > 690 && <h5>Duration</h5>}
+                {width > 690 && <div />}
               </div>
               {data && (
                 <Fragment>
